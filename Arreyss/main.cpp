@@ -1,26 +1,11 @@
-#pragma warning(disable:4326)
-#include<iostream>
-using std::cin;
-using std::cout;
-using std::endl;
+#include"stdafx.h"
+#include"constant.h"
+#include"fillrand.h"
+#include"print.h"
+#include"sort.h"
+#include"statistik.h"
 
-#define tab "\t"
-#define delimiter "\n-----------------------------------------\n"
 
-const int ROWS = 3;
-const int COLS = 4;
-
-void FillRand(int arr[], const int n);
-void FillRand(double arr[], const int n);
-void FillRand(char arr[], const int n);
-void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
-
-void Print(int arr[], const int n);
-void Print(double arr[], const int n);
-void Print(char arr[], const int n);
-
-void Sort(int arr[], const int n);
-void Sort(double arr[], const int n);
 
 int  Sum(int arr[], const int n);
 double Sum(double arr[], const int n);
@@ -36,8 +21,7 @@ double  minValueIn(double arr[], const int n);
 int  maxValueIn(int arr[], const int n);
 double maxValueIn(double arr[], const int n);
 
-void shiftLeft(int arr[], const int n, int number_of_shifts);
-void shiftRight(int arr[], const int n, int number_of_shifts);
+
 
 void main()
 {
@@ -109,41 +93,6 @@ void main()
 	//	Print(i_arr_2, ROWS, COLS);
 }
 
-void FillRand(int arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		arr[i] = rand() % 100;
-		arr[i] = rand() % 10000;
-		arr[i] /= 100;
-	}
-}
-void FillRand(char arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		arr[i] = rand();
-	}
-}
-void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			arr[i][j] = rand() % 100;
-		}
-	}
-cout << endl;
-}
-void Print(char arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << tab;
-	}
-	cout << endl;
-}
 
 void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 
@@ -173,71 +122,3 @@ int exeanges++;
 	}
 }
 
-#ifdef DEBUG
-
-
-int  Sum(int arr[], const int n)
-{
-	int sum = 0;
-	return sum;
-}
-double Sum(double arr[], const int n)
-{
-	double sum = 0;
-	for (int i = 0; i < n; i++)
-	{
-		sum += arr[i];
-	}
-	return sum;
-}
-int Sum(char arr[], const int n)
-{
-	int sum = 0;
-	for (int i = 0; i < n; i++)
-}
-double Avg(double arr[], const int n)
-{
-	return Sum(arr, n) / n;
-}
-double Avg(char arr[], const int n)
-{
-	return (double)Sum(arr, n) / n;
-}
-
-
-int  minValueIn(int arr[], const int n)
-{
-	int min = arr[0];
-}
-return min;
-
-double minValueIn(double arr[], const int n)
-{
-	double min = arr[0];
-	for (int i = 0; i < n; i++)
-	{
-		if (arr[i] < min)min = arr[i];
-	}
-	return min;
-}
-
-int  maxValueIn(int arr[], const int n)
-{
-	int max = arr[0];
-}
-return max;
-
-double maxValueIn(double arr[], const int n)
-{
-	double max = arr[0];
-	for (int i = 0; i < n; i++)
-	{
-		if (arr[i] > max)max = arr[i];
-	}
-	return max;
-}
-
-void shiftLeft(int arr[], const int n, int number_of_shifts)
-{
-	for (int i = 0; i < number_of_shifts; i++)
-#endif // DEBUG
