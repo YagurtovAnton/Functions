@@ -12,6 +12,12 @@ double Factorial(int n);
 double Power(int a, int b);
 int number_of_shifts;
 
+const int SIZE = 8;
+int brr[SIZE];
+FillRand(brr, SIZE);
+Print(brr, SIZE);
+cout << "Сумма элементов массива:" << Sum(brr, SIZE) << endl;
+
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -71,8 +77,12 @@ shiftLeft(arr, n, number_of_shifts);
 Print(arr, n);
 void shiftLeft(int arr[], const int n, int number_of_shifts;
 #endif // 1
+#ifdef 2
 void shiftLeft(int arr[], const int n, int number_of_shifts;
 {
-	int arr[], const int n- int number_of_shifts
+	int arr[], const int n - int number_of_shifts
 }
+
+#endif // 2
+
 
