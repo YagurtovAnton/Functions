@@ -131,6 +131,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="print.cpp" />
     <ClCompile Include="sort.cpp" />
+    <ClCompile Include="StatisticsUntemplated.cpp" />
     <ClCompile Include="statistik.cpp" />
   </ItemGroup>
   <ItemGroup>

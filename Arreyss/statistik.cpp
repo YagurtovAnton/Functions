@@ -75,4 +75,5 @@ template<typename T>T  maxValueIn(T arr[ROWS][COLS], const int ROWS, const int C
 			if (arr[i][j] > max)max = arr[i][j];
 		}
 	}
-	return max; 
+	return max;
+}
