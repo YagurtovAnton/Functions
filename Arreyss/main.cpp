@@ -9,11 +9,9 @@
 
 int  Sum(int arr[], const int n);
 double Sum(double arr[], const int n);
-int Sum(char arr[], const int n);
 
 double Avg(int arr[], const int n);
 double Avg(double arr[], const int n);
-double Avg(char arr[], const int n);
 
 int  minValueIn(int arr[], const int n);
 double  minValueIn(double arr[], const int n);
@@ -32,10 +30,10 @@ void main()
 	Print(arr, n);
 	Sort(arr, n);
 	Print(arr, n);
-	cout << "Noiia yeaiaioia ianneaa: " << Sum(arr, n) << endl;	//Sum of array elements
-	cout << "N?aaiaa-a?eoiaoe?aneia yeaiaioia ianneaa: " << Avg(arr, n) << endl;//Avarage of array elemnts
-	cout << "Ieieiaeuiia cia?aiea a ianneaa: " << minValueIn(arr, n) << endl;
-	cout << "Iaeneiaeuiia cia?aiea a ianneaa: " << maxValueIn(arr, n) << endl;
+	cout << "Суььф элементов массива: " << Sum(arr, n) << endl;	//Sum of array elements
+	cout << "Средне арифметическое элементов массива: " << Avg(arr, n) << endl;//Avarage of array elemnts
+	cout << "Минимальное значение в массиве: " << minValueIn(arr, n) << endl;
+	cout << "Максимальное значение в массиве: " << maxValueIn(arr, n) << endl;
 	int number_of_shifts;
 	const int I_SIZE = 5;
 	int i_arr[I_SIZE];
@@ -43,10 +41,10 @@ void main()
 	Print(i_arr, I_SIZE);
 	Sort(i_arr, I_SIZE);
 	Print(i_arr, I_SIZE);
-	cout << "Noiia yeaiaioia ianneaa: " << Sum(i_arr, I_SIZE) << endl;	//Sum of array elements
-	cout << "N?aaiaa-a?eoiaoe?aneia yeaiaioia ianneaa: " << Avg(i_arr, I_SIZE) << endl;//Avarage of array elemnts
-	cout << "Ieieiaeuiia cia?aiea a ianneaa: " << minValueIn(i_arr, I_SIZE) << endl;
-	cout << "Iaeneiaeuiia cia?aiea a ianneaa: " << maxValueIn(i_arr, I_SIZE) << endl;
+	cout << "Суььф элементов массива: " << Sum(i_arr, I_SIZE) << endl;	//Sum of array elements
+	cout << "Средне арифметическое элементов массива: " << Avg(i_arr, I_SIZE) << endl;//Avarage of array elemnts
+	cout << "Минимальное значение в массиве: " << minValueIn(i_arr, I_SIZE) << endl;
+	cout << "Максимальное значение в массиве: " << maxValueIn(i_arr, I_SIZE) << endl;
 	//int number_of_shifts;
 	//cout << "Aaaaeoa eiee?anoai naaeaia: "; cin >> number_of_shifts;	//Enter number of shifts
 	//shiftLeft(arr, n, number_of_shifts);
@@ -96,8 +94,6 @@ void main()
 
 void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 
-int iterations++;
-int exeanges++;
 
 {
 	for (int i = 0; i< ROWS;i++)
@@ -108,13 +104,13 @@ int exeanges++;
 			{
 				for (int l = k==i?j+1:0; l < COLS; l++)
 				{
-					iterations++;
+				
 					if (arr[k][l] < arr[i][j])
 					{
 						int buffer = arr[i][j];
 						arr[i][j] = arr[k][l];
 						arr[k][l] = buffer;
-						exeanges++;
+						
 					}
 				}
 			}
